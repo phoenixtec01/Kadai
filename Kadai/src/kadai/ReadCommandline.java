@@ -3,11 +3,45 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.File;
 
+import java.util.*;
 
+class ReadCommandline{
 
-public class ReadCommandline{
-
-	public static  String[] read(String[] input) {
+	private ArrayList<String> par = new ArrayList<>();
+	private ArrayList<String> opt= new ArrayList<>();
+	private String url = System.getProperty("user.dir");
+	
+	public ReadCommandline(String[] args) {
+		for (int i =0 ; i <args.length;i++) {
+			if (args[i].matches("-.*")) {
+				opt.add(args[i]);
+			}else {
+				par.add(args[i]);
+			}
+		}
+		if (par.size() !=2) {
+			System.out.println("Parameter Count Error!");
+			System.exit(1);
+		}
+	}
+	
+	//パラメータを返す
+	public String parname (int p) {
+		return par.get(p);
+	}
+	
+	//ファイルPath作成
+	public String Pathget (String filename) {
+		Path now = Paths.get(url);
+		Path npath = Paths.get(filename);
+		Path filepath = now.resolve(npath);
+		String pathname = filepath.toString();
+		
+		return pathname;
+	}
+	
+	/*
+	public String[] read(String[] input) {
 		// TODO 自動生成されたメソッド・スタブ
 		
 		//Pathを格納する配列を確保
@@ -51,5 +85,5 @@ public class ReadCommandline{
 		
 			return paths;
 	}
-	
+	*/
 }
