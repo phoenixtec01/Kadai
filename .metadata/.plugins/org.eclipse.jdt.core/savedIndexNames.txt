@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\Users\meets\Documents\課題\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1633775863.index
+3600333155.index
+3271193799.index
+521605994.index
+2527525880.index
