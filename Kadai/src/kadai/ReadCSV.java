@@ -55,7 +55,7 @@ class ReadCSV {
     						CSVData[0][j] =CSVLine[j];
     						j++;
     					}
-    				}else { //CSVの5行目以降は経歴情報なので、配列2行目以下に入れる。コンマで分ける。
+    				}else { //CSVの5行目以降は経歴情報なので、配列2行目以下に入れる。コンマで細かく分ける。
     					int k = 0;
     					for (String csvtext : data) {
     						CSVLine[k] = csvtext;
@@ -69,13 +69,11 @@ class ReadCSV {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		return CSVData;
 	}
 	
 	//CSVデータのチェック
 	public void DataCheak() {
-
 		for (int i = 0 ;i < linecount -3;i++) {
 			for (int j = 0;j <7;j++) {
 				if (i==0) {

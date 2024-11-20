@@ -13,11 +13,11 @@ public class Kadai {
 	 */
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-	    //コマンドライン（パラメータ）が2確認
+
 		
 		try {
 			ReadCommandline RCline = new ReadCommandline(args);
-			
+		    //コマンドライン（パラメータ）確認
 			if (RCline.parcount() !=2) {
 				System.out.println("Parameter Count Error!");
 				System.exit(1);

@@ -21,9 +21,9 @@ class ReadCommandline{
 				par.add(args[i]);
 			}
 		}
-
 	}
 	
+	//パラメータの数を返す
 	public int parcount () {
 		return par.size();
 	}
@@ -39,7 +39,6 @@ class ReadCommandline{
 		Path npath = Paths.get(filename);
 		Path filepath = now.resolve(npath);
 		String pathname = filepath.toString();
-		
 		return pathname;
 	}
 	
@@ -48,7 +47,6 @@ class ReadCommandline{
 		Path textfile = Paths.get(testname);
 		if (Files.exists(textfile)) {
 			throw new IllegalArgumentException();	        
-			}
-	}
-	
+		}
+	}	
 }
